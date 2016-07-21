@@ -90,7 +90,7 @@
 
             li {
                 float: left;
-                width: 50%;
+                width: 25%;
                 padding: 10px;
                 box-sizing: border-box;
 
@@ -195,18 +195,23 @@
 
 .l-ft {
     color: #f0f0f0;
-    padding: 30px;
+    text-align: center;
+    padding: 20px 30px;
     background-color: #404040;
 
     div {
         font-size: 20px;
-        text-align: center;
-        margin-bottom: 20px;
+        margin: 10px 0 20px;
     }
-    a {
-        font-size: 14px;
-        line-height: 26px;
-        color: #f0f0f0;
+    li {
+        display: inline-block;
+        margin: 0 20px;
+
+        a {
+            font-size: 14px;
+            line-height: 36px;
+            color: #f0f0f0;
+        }
     }
 }
 
@@ -280,12 +285,8 @@
 }
 
 @media screen and (max-width: 600px) {
-    .m-nav {
-        ul {
-            display: none;
-        }
-        .btn-menu {
-            display: block;
-        }
-    }
+    .m-nav ul { display: none; }
+    .m-nav .btn-menu { display: block; }
+    .l-mn .m-works ul li { width: 100%; }
+    .l-ft ul { text-align: left; }
 }
