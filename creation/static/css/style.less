@@ -127,7 +127,47 @@
             background-color: #fdfdfd;
         }
         &:first-child {
+            position: relative;
             height: @winHeight - 70px;
+
+            .arrowup {
+                position: absolute;
+                bottom: 50px;
+
+                @animate: slideup 1s ease infinite;
+
+                -webkit-animation: @animate;
+                        animation: @animate;
+
+                div {
+                    position: relative;
+                    width: 53px;
+
+                    .rotate (@deg) {
+                        -webkit-transform: rotate(@deg);
+                                transform: rotate(@deg);
+                    }
+
+                    span {
+                        position: absolute;
+                        display: block;
+                        width: 33px;
+                        height: 5px;
+                        border-radius: 3px;
+                        background-color: #999;
+
+                        &:first-child {
+                            .rotate(-45deg);
+                        }
+                        &:last-child {
+                            top: 0;
+                            right: 0;
+
+                            .rotate(45deg);
+                        }
+                    }
+                }
+            }
         }
         &:last-child {
             border-bottom: none;
@@ -185,9 +225,20 @@
         .transform(1.0, 1.0);
     }
 }
+.slideup {
+    from {
+        bottom: 50px;
+    }
+    to {
+        bottom: 100px;
+    }
+}
 
 @-webkit-keyframes forithm { .forithm; }
         @keyframes forithm { .forithm; }
+
+@-webkit-keyframes slideup { .slideup; }
+        @keyframes slideup { .slideup; }
 
 
 /* media */
