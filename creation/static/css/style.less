@@ -13,6 +13,7 @@
         background-size: 100% auto;
     }
     .m-nav {
+        position: relative;
         padding: 0 30px;
         background-color: rgba(255, 255, 255, 0.9);
 
@@ -173,3 +174,52 @@
 
 @-webkit-keyframes forithm { .forithm; }
         @keyframes forithm { .forithm; }
+
+
+/* media */
+.btn-menu {
+    position: absolute;
+    right: 30px;
+    display: none;
+
+    span {
+        display: block;
+        width: 25px;
+        height: 4px;
+        background-color: #666;
+        border-radius: 2px;
+        margin: 3px 0;
+    }
+}
+
+.m-menu {
+    background-color: rgba(64, 64, 64, 0.9);
+    padding: 0 30px;
+    display: none;
+
+    li {
+        border-bottom: 1px solid #999;
+
+        a {
+            display: block;
+            font-size: 20px;
+            line-height: 60px;
+            color: #f0f0f0;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .m-nav {
+        ul {
+            display: none;
+        }
+        .btn-menu {
+            display: block;
+        }
+    }
+}
