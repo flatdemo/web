@@ -83,7 +83,7 @@
                 animation: @animate;
     }
     .m-works {
-        margin: 20px 0;
+        margin: 20px 0 30px;
 
         ul {
             margin: -10px;
@@ -114,6 +114,8 @@
 
     /* common */
     section {
+        @winHeight: `window.innerHeight`;
+
         padding: 0 30px;
         overflow: hidden;
         border-bottom: 2px solid #d8d8d8;
@@ -123,6 +125,9 @@
         }
         &:nth-child(2n+1) {
             background-color: #fdfdfd;
+        }
+        &:first-child {
+            height: @winHeight - 70px;
         }
         &:last-child {
             border-bottom: none;
