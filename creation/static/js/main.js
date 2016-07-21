@@ -10,6 +10,8 @@ var main = {
         var _this = this;
         _this.parallaxBar();
         _this.toggleMenu();
+
+        $('.js_arrow').delay(2000).fadeIn();
     },
     parallaxBar: function () {
         var $bar = $('.js_bar');
