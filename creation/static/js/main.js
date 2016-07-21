@@ -24,6 +24,9 @@ var main = {
         $btn.on('click', function () {
             $menu.slideToggle();
         });
+        $menu.on('click', 'a', function () {
+            $menu.hide();
+        });
     }
 };
 
