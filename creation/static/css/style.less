@@ -4,6 +4,12 @@
 @spaceWide: 10%;
 @spaceNarrow: 20px;
 
+.rotate (@deg) {
+    -webkit-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+
 .l-hd {
     position: fixed;
     top: 0;
@@ -49,14 +55,38 @@
             right: @spaceWide;
             display: none;
 
+            span {
+                display: block;
+                width: 25px;
+                height: 4px;
+                background-color: #666;
+                border-radius: 2px;
+            }
+
             .btn-menu {
                 span {
-                    display: block;
-                    width: 25px;
-                    height: 4px;
-                    background-color: #666;
-                    border-radius: 2px;
                     margin: 3px 0;
+                }
+            }
+
+            .btn-close {
+                position: relative;
+                width: 25px;
+                height: 20px;
+
+                span {
+                    position: absolute;
+                    top: 8px;
+
+                    &:nth-child(1) {
+                        .rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(3) {
+                        .rotate(-45deg);
+                    }
                 }
             }
         }
@@ -186,11 +216,6 @@
                 div {
                     position: relative;
                     width: 53px;
-
-                    .rotate (@deg) {
-                        -webkit-transform: rotate(@deg);
-                                transform: rotate(@deg);
-                    }
 
                     span {
                         position: absolute;

@@ -24,6 +24,7 @@ var main = {
         var $btn = $('.js_toggle_menu');
         var $menu = $('.js_menu');
         $btn.on('click', function () {
+            $btn.children().toggleClass('btn-close').toggleClass('btn-menu');
             $menu.slideToggle();
         });
         $menu.on('click', 'a', function () {
