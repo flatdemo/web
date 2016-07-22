@@ -1,0 +1,28 @@
+.forithm {
+    .transform (@opacity, @scale) {
+        opacity: @opacity;
+        -webkit-transform: scale(@scale);
+                transform: scale(@scale);
+    }
+
+    from {
+        .transform(0, 0);
+    }
+    to {
+        .transform(1.0, 1.0);
+    }
+}
+.slideup {
+    from {
+        bottom: 50px;
+    }
+    to {
+        bottom: 100px;
+    }
+}
+
+@-webkit-keyframes forithm { .forithm; }
+        @keyframes forithm { .forithm; }
+
+@-webkit-keyframes slideup { .slideup; }
+        @keyframes slideup { .slideup; }
