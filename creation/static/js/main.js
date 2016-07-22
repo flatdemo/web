@@ -11,7 +11,9 @@ var main = {
         _this.parallaxBar();
         _this.toggleMenu();
 
-        $('.js_arrow_up').delay(2000).fadeIn();
+        $('.js_intro')[0].addEventListener('webkitAnimationEnd', function () {
+            $('.js_arrow_up').show();
+        }, false);
     },
     parallaxBar: function () {
         var $bar = $('.js_bar');
@@ -25,7 +27,7 @@ var main = {
         var $menu = $('.js_menu');
         $btn.on('click', function () {
             $btn.children().toggleClass('btn-close').toggleClass('btn-menu');
-            $menu.slideToggle();
+            $menu.toggle();
         });
         $menu.on('click', 'a', function () {
             $menu.hide();
