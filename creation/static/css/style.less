@@ -137,14 +137,15 @@
 
                 a {
                     display: block;
+                    border: 2px solid transparent;
 
-                    @animate: -webkit-transform 0.5s, transform 0.5s, box-shadow 0.5s;
+                    @animate: -webkit-transform 0.5s, transform 0.5s, border 0.5s;
 
                     -webkit-transition: @animate;
                             transition: @animate;
 
                     &:hover {
-                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                        border: 2px solid #e0e0e0;
                         -webkit-transform: scale(1.05);
                                 transform: scale(1.05);
                     }
@@ -197,7 +198,7 @@
                         width: 33px;
                         height: 5px;
                         border-radius: 2.5px;
-                        background-color: #999;
+                        background-color: rgba(153, 153, 153, 0.9);
 
                         &:first-child {
                             .rotate(-45deg);
